@@ -25,15 +25,28 @@ Databse Initialization
 To validate whether the database was created successfully, please navigate back to the app directory and confirm the existance of the app.sqlite file.
 
 Now launch the app:
+
 	python main.py
 
 The web interface can be accessed:
+
 	http://localhost:5000/ 
 
 From there, upload the file via the URL that labelled "Upload daily feed"
 
-To check whether the app has correctly inserted the data into the database, you can load the app.sqlite file into a sqlite reader/viewer (free tools available at http://sqliteviewer.flowsoft7.com/)
+To check whether the app has correctly inserted the data into the database, you can load the app.sqlite file into a sqlite reader/viewer - free tools available at: 
+
+	http://sqliteviewer.flowsoft7.com/
 
 
 3) Next steps
 
+A) The database is not fully functional to the extent we'd want this app to be. It currently accepts all files that match the expected feed format to the exact column. Adding in features to reject files not meeting this standard would be ideal.
+
+B) The DB also needs to work with a few other tables. In round two of this app, we would create dedicated tables for customers and products and then use the table from the file upload as a staging table that then makes the final inserts/updates into the dedicated tables
+
+C) There should be testing for all of methods
+
+D) Upload/progress bar for the file upload would be great.
+
+E) Modifying this to work on MySQL instead of SQLite would allow for this to scale up to a production level app instead of a local app ; this is why SQLAlchemy was used, to make that easier

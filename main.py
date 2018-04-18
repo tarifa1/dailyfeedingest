@@ -28,7 +28,9 @@ class fileEntry(db.Model):
 	product_id = db.Column(db.Integer)
 	product_name = db.Column(db.String(100))
 	purchase_price = db.Column(db.Integer)
+	#This should be some other datatype, I was just having trouble pinning down which kind of date type to use so I left it as a string for the Proof of Concept
 	transaction_time = db.Column(db.String(100))
+
 
 @app.route("/", methods=["GET", "POST"])
 def create_note():

@@ -45,6 +45,8 @@ A) The database is not fully functional to the extent we'd want this app to be. 
 
 B) The DB also needs to work with a few other tables. In round two of this app, we would create dedicated tables for customers and products and then use the table from the file upload as a staging table that then makes the final inserts/updates into the dedicated tables
 
+-An example of this normalization is made available in the form of the file: db_normalization_plan.xlsx which is available in the main directory
+
 C) There should be testing for all of methods
 
 D) Upload/progress bar for the file upload would be great.

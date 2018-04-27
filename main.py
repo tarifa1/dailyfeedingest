@@ -16,7 +16,7 @@ class Note(db.Model):
 	title = db.Column(db.String(80))
 	body = db.Column(db.Text)
 
-class fileEntry(db.Model):
+class FileEntry(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	customer_id = db.Column(db.Integer)
 	first_name = db.Column(db.String(100))
@@ -79,7 +79,7 @@ def uploading_file():
 				purchase_price = row_as_list[9]
 				transaction_time = row_as_list[10]
 
-				file_entry = fileEntry(customer_id = customer_id, first_name = first_name, last_name = last_name, street_address = street_address, state = state, zip_code = zip_code, requested_change = requested_change, product_id = product_id, product_name = product_name, purchase_price = purchase_price, transaction_time = transaction_time)
+				file_entry = FileEntry(customer_id = customer_id, first_name = first_name, last_name = last_name, street_address = street_address, state = state, zip_code = zip_code, requested_change = requested_change, product_id = product_id, product_name = product_name, purchase_price = purchase_price, transaction_time = transaction_time)
 
 				db.session.add(file_entry)
 				db.session.commit()
